@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -35,4 +35,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.buttonRed {
+  background-color: red;
+  color: white;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 3px;
+}
+.buttonGreen {
+  background-color: green;
+  color: white;
+  margin-right: 20px;
+  padding: 3px;
+}
+.buttonBlue {
+  background-color: cornflowerblue;
+  color: white;
 }
