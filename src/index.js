@@ -7,12 +7,12 @@ import axios from 'axios';
 
 //set the global variables
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
-axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN';
+axios.defaults.headers.common['Authorization'] = 'AUTH TOKEN Yichun';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 //interceptor 
 axios.interceptors.request.use(request => {
-  console.log(request);
+  console.log("This is log of request in interceptor ", request);
   console.log("in the interceptor : request")
   // Edit request config
   return request;
