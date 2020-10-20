@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 import './App.css';
 
+import { BrowserRouter } from 'react-router-dom';
 
+import axios from 'axios';
 
 class App extends Component {
   
@@ -17,6 +19,7 @@ class App extends Component {
 
 
     componentDidMount() {
+      // axios.get( '/posts')
       fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
         .then(result => {
@@ -111,7 +114,7 @@ class App extends Component {
       width: '600px',
     }
       return (
-        <>
+        <BrowserRouter>
          <button className = "buttonBlue" onClick = {this.addNewRecord}>Add a New Record</button>
         <table className="Table">
         <thead>
@@ -149,8 +152,7 @@ class App extends Component {
                 </td>
                 <td>
                   <input 
-                  onKeyDown={(event) => this.handleEnter(event, post.id, "body  ")}
-                  onChange = {(event) =>this.change(event)} 
+                  onKeyDown={(event) => this.handleEnter(event, post.id, "body")}
                   style = {style2} 
                   defaultValue = {post.body}></input>
                 </td>
@@ -161,7 +163,7 @@ class App extends Component {
         </tbody>
         </table>
        
-        </>
+        </BrowserRouter>
 
     
       )
